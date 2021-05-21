@@ -6,62 +6,17 @@ page_protect();
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-    <title>confirugoWeb GYM | Nuevo Usuario</title>
-    <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
-    <script type="text/javascript" src="../../js/Script.js"></script>
-    <link rel="stylesheet" href="../../css/dashMain.css">
-    <link rel="stylesheet" type="text/css" href="../../css/entypo.css">
-    <link href="a1style.css" type="text/css" rel="stylesheet">
-    <style>
-    	.page-container .sidebar-menu #main-menu li#regis > a {
-    	background-color: #2b303a;
-    	color: #ffffff;
-		}
-       #boxx
-	{
-		width:220px;
-	}</style>
+<?php include('head.php'); ?>
 
-</head>
-      <body class="page-body  page-fade" onload="collapseSidebar()">
+    <body id="body-pd">
 
-    	<div class="page-container sidebar-collapsed" id="navbarcollapse">	
-	
-		<div class="sidebar-menu">
-	
-			<header class="logo-env">
-			
-			<!-- logo -->
-			<div class="logo">
-				<a href="main.php">
-					<img src="../../images/logo.png" alt="" width="192" height="80" />
-				</a>
-			</div>
-			
-					<!-- logo collapse icon -->
-					<div class="sidebar-collapse" onclick="collapseSidebar()">
-				<a href="#" class="sidebar-collapse-icon with-animation"><!-- agrega la clase "with-animation" si desea que la barra lateral tenga animación durante la transición de expansión / contracción -->
-					<i class="entypo-menu"></i>
-				</a>
-			</div>
-							
-			
-		
-			</header>
-    		<?php include('nav.php'); ?>
-    	</div>
+            <?php include('nav.php'); ?>
 
     		<div class="main-content">
 		
 				<div class="row">
-					
-					<!-- Información de perfil y notificaciones -->
-					<div class="col-md-6 col-sm-8 clearfix">	
-							
-					</div>
-					
+
 					
 					<!-- Raw Links -->
 					<div class="col-md-6 col-sm-4 clearfix hidden-xs">
@@ -207,9 +162,10 @@ page_protect();
         </script>
         
         
-			<?php include('footer.php'); ?>
+
     	</div>
 
     </body>
+<?php include('footer.php'); ?>
 </html>
 

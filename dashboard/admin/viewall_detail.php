@@ -8,61 +8,10 @@ if (isset($_POST['name'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<?php include('head.php'); ?>
+    <body id="body-pd">
 
-    <title>ConfiguroWeb | Editar Miembro</title>
-    <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
-    <script type="text/javascript" src="../../js/Script.js"></script>
-    <link rel="stylesheet" href="../../css/dashMain.css">
-    <link rel="stylesheet" type="text/css" href="../../css/entypo.css">
-	<link href="a1style.css" rel="stylesheet" type="text/css">
-	
-	<style>
- 	#button1
-	{
-	width:126px;
-	}
-	#boxxe
-	{
-		width:230px;
-	}
-
-	.page-container .sidebar-menu #main-menu li#hassubopen > a {
-	background-color: #2b303a;
-	color: #ffffff;
-	}
-
-	</style>
-
-</head>
-    <body class="page-body  page-fade" onload="collapseSidebar()">
-
-    	<div class="page-container sidebar-collapsed" id="navbarcollapse">	
-	
-		<div class="sidebar-menu">
-	
-			<header class="logo-env">
-			
-			<!-- logo -->
-			<div class="logo">
-				<a href="main.php">
-					<img src="../../images/logo.png" alt="" width="192" height="80" />
-				</a>
-			</div>
-			
-					<!-- logo collapse icon -->
-					<div class="sidebar-collapse" onclick="collapseSidebar()">
-				<a href="#" class="sidebar-collapse-icon with-animation"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
-					<i class="entypo-menu"></i>
-				</a>
-			</div>
-							
-			
-		
-			</header>
-    		<?php include('nav.php'); ?>
-    	</div>
-
+            <?php include('nav.php'); ?>
     		<div class="main-content">
 		
 				<div class="row">
@@ -95,7 +44,7 @@ if (isset($_POST['name'])) {
 		<hr />
 
 			<?php
-	    
+
 				    $query  = "SELECT * FROM users u 
 				    		   INNER JOIN address a ON u.userid=a.id
 				    		   INNER JOIN  health_status h ON u.userid=h.uid
@@ -105,22 +54,22 @@ if (isset($_POST['name'])) {
 				    //echo $query;
 				    $result = mysqli_query($con, $query);
 				    $sno    = 1;
-				    
+
 				    $name="";
 				    $gender="";
 
 				    if (mysqli_affected_rows($con) == 1) {
 				        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-				    
+
 				            $name    = $row['username'];
 				            $gender =$row['gender'];
 				            $mobile = $row['mobile'];
 				            $email   = $row['email'];
-				            $dob	 = $row['dob'];         
+				            $dob	 = $row['dob'];
 				            $jdate    = $row['joining_date'];
 				          	$streetname=$row['streetName'];
 				          	$state=$row['state'];
-				          	$city=$row['city'];  
+				          	$city=$row['city'];
 				          	$zipcode=$row['zipcode'];
 				            $calorie=$row['calorie'];
 				            $height=$row['height'];
@@ -150,7 +99,7 @@ if (isset($_POST['name'])) {
 			<div class="a1-container a1-small a1-padding-32" style="margin-top:2px; margin-bottom:2px;">
         <div class="a1-card-8 a1-light-gray" style="width:600px; margin:0 auto;">
 		<div class="a1-container a1-dark-gray a1-center">
-        	<h6>Editar Detalles de Miembro</h3>
+        	<h3>Editar Detalles de Miembro</h3>
         </div>
        <form id="form1" name="form1" method="post" class="a1-container" action="edit_member.php">
          <table width="100%" border="0" align="center">
@@ -271,7 +220,9 @@ if (isset($_POST['name'])) {
 </html>	
 
 <?php
+
 } else {
     
 }
+
 ?>

@@ -1,70 +1,84 @@
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+             <?php include('./breadgrum-log.php'); ?>
+        </header>
 
-<ul id="main-menu" class="" >
-			
-    <li id="dash"><a href="index.php"><i class="entypo-gauge"></i><span>Panel de Control</span></a></li>
-                
-	<li id="regis"><a href="new_entry.php"><i class="entypo-user-add"></i><span>Nuevo Registro</span></a>                
-				
-	<li id="paymnt"><a href="payments.php"><i class="entypo-star"></i><span>Pago</span></a></li>
 
-	<li class="" id="hassubopen"><a href="#" onclick="memberExpand(1)"><i class="entypo-users"></i><span>Miembros</span></a>
-		<ul id="memExpand">
-			<li class="active">
-				<a href="view_mem.php"><span>Editar Miembros</span></a></li>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
 
-			<li><a href="table_view.php"><span>Ver Miembro</span></a></li>
-		</ul>
-	</li>
+                    <div class="nav_list">
+                        <a href="index.php" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
+                        <a href="new_entry.php" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Nuevo Registro</span> </a>
+                        <a href="payments.php" class="nav_link">  <i class='bx bx-dollar-circle nav_icon'></i> <span class="nav_name">Pago</span> </a>
 
-	<li id="health_status"><a href="new_health_status.php"><i class="entypo-user-add"></i><span>Estado de Salud</span></a> 	
+                          <li class="nav-item dropdown nav_link">
+                             <i class='bx bxs-face'></i>
 
-		<li class="" id="planhassubopen"><a href="#" onclick="memberExpand(2)"><i class="entypo-quote"></i><span>Plan</span></a>
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="nav_name" style="color: #AFA5D9">Miembros</span>
+                            </a>
 
-		<ul id="planExpand">
-			<li class="active">
-				<a href="new_plan.php"><span>Nuevo Plan</span></a></li>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="table_view.php">Ver Miembro</a>
+                              <a class="dropdown-item" href="view_mem.php">Editar Miembros</a>
+                            </div>
+                          </li>
 
-			<li><a href="view_plan.php"><span>Editar Detalles de Suscripción</span></a></li>
-		</ul>
+                        <a href="new_health_status.php" class="nav_link">  <i class='bx bxs-capsule nav_icon'></i> <span class="nav_name">Estado de Salud</span> </a>
 
-	<li class="" id="overviewhassubopen"><a href="#" onclick="memberExpand(3)"><i class="entypo-box"></i><span>Vista General</span></a>
+                          <li class="nav-item dropdown nav_link">
+                              <i class='bx bx-message-square-detail nav_icon'></i>
 
-		<ul id="overviewExpand">
-			<li class="active">
-				<a href="over_members_month.php"><span>Miembros por Mes</span></a>
-			</li>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="nav_name" style="color: #AFA5D9">Suscripción</span>
+                            </a>
 
-			<li>
-				<a href="over_members_year.php"><span>Miembros por Año</span></a>
-			</li>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="new_plan.php">Nueva Suscripción</a>
+                              <a class="dropdown-item" href="view_plan.php">Editar Detalles de Suscripción</a>
+                            </div>
+                          </li>
 
-			<li>
-				<a href="revenue_month.php"><span>Entradas por Mes</span></a>
-			</li>			
+                          <li class="nav-item dropdown nav_link">
+                              <i class='bx bx-receipt nav_icon'></i>
 
-		</ul>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="nav_name" style="color: #AFA5D9">Vista General</span>
+                            </a>
 
-	<li class="" id="routinehassubopen"><a href="#" onclick="memberExpand(4)"><i class="entypo-alert"></i><span>Rutina de Ejercicios</span></a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="over_members_month.php">Miembros x Mes</a>
+                              <a class="dropdown-item" href="over_members_year.php">Miembros x Año</a>
+                              <a class="dropdown-item" href="revenue_month.php">Entradas x Mes</a>
+                            </div>
+                          </li>
 
-		<ul id="routineExpand">
-			<li class="active">
-				<a href="addroutine.php"><span>Agregar Rutina</span></a>
-			</li>
+                          <li class="nav-item dropdown nav_link">
+                              <i class='bx bx-clipboard nav_icon' ></i>
 
-			<li>
-				<a href="editroutine.php"><span>Editar Rutina</span></a>
-			</li>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <span class="nav_name" style="color: #AFA5D9">Rutina de Ejercicios</span>
+                            </a>
 
-			<li>
-				<a href="viewroutine.php"><span>Ver Rutina</span></a>
-			</li>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="new_plan.php"></a>
+                              <a class="dropdown-item" href="addroutine.php">Agregar Rutina</a>
+                              <a class="dropdown-item" href="editroutine.php">Editar Rutina</a>
+                              <a class="dropdown-item" href="viewroutine.php">Ver Rutina</a>
+                            </div>
+                          </li>
 
-		</ul>
+                        <a href="more-userprofile.php" class="nav_link"> <i class='bx bx-user-circle nav_icon'></i></i>
+                            <span class="nav_name">Perfil</span>
+                        </a>
+                    </div>
 
-	</li>
+                </div>
 
-	<li id="adminprofile"><a href="more-userprofile.php"><i class="entypo-folder"></i><span>Perfil</span></a></li>
+                <a href="logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Cerrar Sesión</span> </a>
 
-	<li><a href="logout.php"><i class="entypo-logout"></i><span>Cerrar Sesión</span></a></li>
-
-</ul>	
+            </nav>
+        </div>
